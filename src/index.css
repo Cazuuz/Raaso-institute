@@ -1,0 +1,209 @@
+/* @import url("https://fonts.googleapis.com/css?family=Raleway:400,500,600,700,800,900"); */
+@import url("https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+
+body {
+  background: #67b26f; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #4ca2cd,
+    #67b26f
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #4ca2cd,
+    #67b26f
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  font-family: "Amiri", serif;
+  color: #114076;
+}
+.content {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 10px;
+  margin: auto;
+  width: 90%;
+}
+.rt-heading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.first-heading {
+  margin: 20px 0 0 0;
+}
+
+.second-heading {
+  margin: 5px 0 10px 0;
+  background-color: #114076;
+  color: #ffff;
+  padding: 2px 5px;
+  border-radius: 10px;
+}
+.main-data {
+  background-color: #fff;
+  margin-top: 5px;
+  padding: 10px;
+  border-radius: 10px;
+  border-top: 2px solid #114076;
+}
+.main-info {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.img-name {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  text-transform: capitalize;
+}
+.studnet-image {
+  width: 100px;
+  height: 100px;
+  border-radius: 100px;
+  border: 5px solid #114076;
+  object-fit: cover;
+}
+
+table,
+td {
+  border: 1px solid rgb(155, 154, 154);
+  border-collapse: collapse;
+  padding: 5px 100px 5px 5px;
+  width: 100%;
+}
+
+.student-details {
+  background-color: #fff;
+  margin-top: 5px;
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  border-top: 2px solid #114076;
+}
+.bold {
+  font-weight: 700;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+}
+
+.login-from {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  padding: 10px;
+  height: 55vh;
+  width: 50%;
+  margin: auto;
+  align-items: center;
+  border-radius: 10px;
+}
+
+input {
+  background-color: #fff;
+  height: 4vh;
+  padding: 5px;
+  border-radius: 10px;
+  border: 2px solid #114076;
+  margin-bottom: 5px;
+}
+
+.wrong-reg-no {
+  border: 2px solid red;
+  color: red;
+  margin-bottom: 0px;
+}
+.wrong-reg-no-message {
+  color: red;
+  margin: 0;
+  font-size: 10px;
+  font-weight: 500;
+}
+::placeholder {
+  color: #114076;
+  opacity: 0.5;
+}
+button {
+  background-color: #114076;
+  border-radius: 10px;
+  padding: 5px;
+  color: #fff;
+  height: 6vh;
+}
+label {
+  font-weight: 700;
+  font-size: 13px;
+}
+.loader {
+  position: fixed;
+  border: 5px solid #f3f3f3; /* Light grey */
+  border-top: 5px solid #114076; /* Blue */
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 2s linear infinite;
+  margin: auto;
+  z-index: 3;
+  right: 50%;
+  top: 50%;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.overlay {
+  position: fixed; /* Sit on top of the page content */
+  width: 100%; /* Full width (cover the whole page) */
+  height: 100%; /* Full height (cover the whole page) */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* Black background with opacity */
+  z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+  cursor: pointer; /* Add a pointer on hover */
+}
+
+footer {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+@media (max-width: 430px) {
+  .content {
+    grid-template-columns: 1fr;
+    width: auto;
+  }
+  .student-details {
+    margin: 10px;
+  }
+  .main-data {
+    margin: 10px;
+  }
+  .first-heading {
+    font-size: 20px;
+  }
+  .login-from {
+    width: 100%;
+    margin: auto;
+    height: 50vh;
+  }
+  .loader {
+    top: 35%;
+  }
+}
